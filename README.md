@@ -21,3 +21,9 @@ AIV Plant Doctor is a mobile-friendly agricultural decision-support platform tha
 
 ## Status
 Proposed / development planning
+
+## Contributor guidance
+- Start with one GitHub issue and submit a focused pull request for that task.
+- Project-wide behavior and safety rules are in `.github/copilot-instructions.md`.
+- Elixir and agronomic-data rules are in `.github/instructions/`.
+- Use the `aiv-knowledge-base` skill when working on agricultural knowledge or recommendations.
