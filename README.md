@@ -27,3 +27,40 @@ Proposed / development planning
 - Project-wide behavior and safety rules are in `.github/copilot-instructions.md`.
 - Elixir and agronomic-data rules are in `.github/instructions/`.
 - Use the `aiv-knowledge-base` skill when working on agricultural knowledge or recommendations.
+
+## Local development
+
+Prerequisites:
+- Elixir 1.17 or later
+- PostgreSQL 14 or later
+
+Install dependencies and create, migrate, and seed the development database:
+
+```sh
+mix setup
+```
+
+`mix setup` installs Hex dependencies and frontend tooling, then prepares PostgreSQL.
+The development and test database settings use `PGUSER`, `PGPASSWORD`, `PGHOST`, and
+`PGDATABASE`/`PGDATABASE_TEST` environment variables when they are set.
+
+Start the application:
+
+```sh
+mix phx.server
+```
+
+Then open `http://localhost:4000`.
+
+Reset and recreate the development database:
+
+```sh
+mix ecto.reset
+```
+
+Run the formatter and test suite:
+
+```sh
+mix format --check-formatted
+mix test
+```
